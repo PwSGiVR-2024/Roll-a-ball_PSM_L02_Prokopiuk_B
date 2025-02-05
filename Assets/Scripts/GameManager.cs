@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1); 
         }
 
-        countdownText.text = "Start"; 
+        countdownText.text = "idz"; 
         EventManager.Instance.TriggerEvent("CountdownFinished", true);
         gameScreen.SetActive(true);
         yield return new WaitForSeconds(1); 
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
     
